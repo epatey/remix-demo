@@ -7,16 +7,13 @@ import { createPost } from "~/models/post.server";
 
 type ActionData =
   | {
-      title: null | string;
-      slug: null | string;
-      markdown: null | string;
-    }
+    title: null | string;
+    slug: null | string;
+    markdown: null | string;
+  }
   | undefined;
 
 export const action: ActionFunction = async ({ request }) => {
-  // TODO: remove me
-  await new Promise((res) => setTimeout(res, 10000));
-
   const formData = await request.formData();
 
   const title = formData.get("title");
