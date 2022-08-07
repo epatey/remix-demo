@@ -1,0 +1,6 @@
+name: "My Shared Steps"
+runs:
+  using: "composite" # <-- this is the important part
+  steps:
+    - run: echo "XXXXX Hello, World"
+      shell: bash
